@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Metric/Imperial Unit Converter</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1 class="title">Metric/Imperial unit conversion</h1>
+                <input type="text" onfocus="this.value=''" onkeyup="getNumber()" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" id="count-el"  min="0" placeholder="Type here">
+                <!-- <button onclick=getNumber()>Enter</button> -->
+            </header>
+
+            <section>
+                <div class="container">
+                    <div class="length" >
+                        <details>
+                            <summary>Length (Meter/Feet)</summary>
+                            <p id="length-el"></p>
+                        </details>
+                        <!-- <p>Length (Meter/Feet)</p> -->
+                        <!-- <p id="length-el"></p> -->
+
+                    </div>
+                    <div class="volume">
+                        <details>
+                            <summary>Volume (Liters/Gallons)</summary>
+                            <p id="volume-el"></p>
+                        </details>
+                        <!-- <p>Volume (Liters/Gallons)</p>
+                        <p id="volume-el"></p> -->
+
+                    </div>
+                    <div class="mass">
+                        <details>
+                            <summary>Mass (Kilograms/Pounds)</summary>
+                            <p id="mass-el"></p>
+                        </details>
+                        <!-- <p>Mass (Kilograms/Pounds)</p>
+                        <p id="mass-el"></p> -->
+
+                    </div>
+                    <div class="speed">
+                        <details>
+                            <summary>Speed (Kilometer/Miles)</summary>
+                            <p id="speed-el"></p>
+                        </details>
+                        <!-- <p>Speed (Kilometer per hour/Miles per hour)</p>
+                        <p id="speed-el"></p> -->
+
+                    </div>
+                    <div class="temp">
+                        <details>
+                            <summary>Temperature (Farenheit/Celsius)</summary>
+                            <p id="temp-el"></p>
+                        </details>
+                        <!-- <p>Temperature (Farenheit/Celsius)</p>
+                        <p id="temp-el"></p> -->
+
+                    </div>
+                </div> <!--Container End-->
+            </section>
+            
+        </main>
+        
+
+        
+        
+    <script src="index.js"></script>
+    </body>
+</html>
