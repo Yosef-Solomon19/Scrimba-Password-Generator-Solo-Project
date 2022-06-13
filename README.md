@@ -1,4 +1,4 @@
-# Unit Converter link
+# Password Generator
 
 [https://unit-converter-scrimba.netlify.app/](https://unit-converter-scrimba.netlify.app/)
 
