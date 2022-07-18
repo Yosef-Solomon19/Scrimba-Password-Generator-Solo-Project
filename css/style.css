@@ -4,6 +4,41 @@
 html, body, input {
     margin: 0;
     padding: 0;
+    background-color: #1F2937;
+    color: wheat;
 }
 
+.container{
+    /* border: 1px solid red; */
+    margin: 115px 0px 0px 52px;
+    /* margin-top: 100px;
+    margin-left: 50px */
+    
+}
 
+.container .main-section h1{    
+    margin-bottom: 0;
+}
+
+.container .main-section h3{
+    margin-top: 5px;
+
+}
+
+.bottom-border {
+    border-bottom: 1px solid red;   
+}
+
+.password-genereation-section {
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid red;
+}
+
+.text-password {
+    /* border: 1px solid green; */
+    margin: 0px 25px 0px 25px;
+    background-color: #273549;
+    font-size: 32px;
+    margin-left: 0px;
+}
