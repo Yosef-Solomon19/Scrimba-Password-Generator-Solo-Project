@@ -5,7 +5,7 @@ html, body, input {
     margin: 0;
     padding: 0;
     background-color: #1F2937;
-    color: wheat;
+    color: white;
 }
 
 .container{
@@ -15,24 +15,37 @@ html, body, input {
     margin-left: 50px */
     
 }
-
+/* Main Section */
 .container .main-section h1{    
     margin-bottom: 0;
 }
 
 .container .main-section h3{
     margin-top: 5px;
-
+    margin-bottom: 53px;
 }
 
+.text-grey {
+    color: #D5D4D8;
+}
+
+.text-green {
+    color: #4ADF86;
+}
+
+/* Password Section */
 .bottom-border {
-    border-bottom: 1px solid red;   
+    border-bottom: 2px solid #2F3E53;   
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
+
 
 .password-genereation-section {
     display: flex;
     justify-content: flex-start;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .text-password {
@@ -41,4 +54,7 @@ html, body, input {
     background-color: #273549;
     font-size: 32px;
     margin-left: 0px;
+    color: #55F991;
+    padding: 0px 50px 0px 50px;
+    border-radius: 5px;
 }
