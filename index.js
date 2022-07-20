@@ -84,6 +84,35 @@ function copyToClipBoard() {
 //             Each password should be 15 characters long.
 // 
 
+// *** 20/7/2022 *** 
+// What I've Accomplished 
+// Compeleted the requiremnts:
+// Build project from scratch 
+// Generate two random passwords when user clicks the button
+// Each password should be 15 characters long
+
+// Working on: 
+// copy on click feature 
+
+// What I've learned 
+// click events doesn't work with element that have been dynamically generated from js 
+// Kinda learned how to create elements in js with: 
+// .createElement('tagName')
+//add existing class names w/ .classList.add('')
+// add content with .textContent
+// if you want to add an element in a div, create a variable and use DOM to select the class
+// of the div. Then use divVaraible.appendChild(element to add into div)
+
+// Problem
+// How do I copy content of an element that was dynamicall created from js? 
+// url references: https://stackoverflow.com/questions/6658752/click-event-doesnt-work-on-dynamically-generated-elements
+// https://www.geeksforgeeks.org/how-to-create-copy-to-clipboard-button/
+
+
+
+// Future development 
+// Ability to set password length
+// Toggle "symbols" & "numbers" on/off
 
 
 
