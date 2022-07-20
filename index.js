@@ -14,51 +14,64 @@ console.log(randomCharacter);
 
 // Generate passwords 
 function randomPasswords() {
-    let passwordText = "";
+    let passwordTextA = "";
+    let passwordTextB = "";
     
     for(let i = 0; i <= 14; i++) {
-        let randomCharacter = characters[Math.floor(Math.random()* 91)];
-        passwordText += randomCharacter;
+        let randomCharacterA = characters[Math.floor(Math.random()* 91)];
+        let randomCharacterB = characters[Math.floor(Math.random()* 91)];
+
+        passwordTextA += randomCharacterA;
+        passwordTextB += randomCharacterB;
     }    
     
-    console.log(passwordText.length);
-    console.log(passwordText);    
-    passwordGenerationLimit();
+    console.log(passwordTextA.length);
+    console.log(passwordTextA);    
+    console.log(passwordTextB.length);
+    console.log(passwordTextB);
+    // passwordGenerationLimit();
 
-    displayPassword(passwordText);
+    displayPassword(passwordTextA, passwordTextB);
+    
 }
 
 // Function to prevent generating more than two passwords 
-let passwordBtnCtn = 0
-function passwordGenerationLimit () {
-    passwordBtnCtn += 1; 
-    if (passwordBtnCtn === 2) {
-        passwordBtnEl.disabled;
-    }
-}
+// let passwordBtnCtn = 0
+// function passwordGenerationLimit () {
+//     passwordBtnCtn += 1; 
+//     console.log(passwordBtnCtn);
+//     if (passwordBtnCtn === 2) {
+//         passwordBtnEl.disabled = true;
+//     }
+// }
 
-// Adding a <p> in a div with an existing class ? 
-// const passwordEl = document.createElement('p');
-// passwordEl.classList.add("password-section", "password-genereation-section","text-password" );
-// passwordEl.textContent = "test3";
-// const passwordText = document.querySelector(".password-genereation-section");
-// passwordText.appendChild(passwordEl);
 
+
+
+// Create element globally instead of creating it inside displayPassword funciton
+const passwordElA = document.createElement('p'); // Creates element by tagName
+const passwordElB = document.createElement('p');
 
 // function to add an element with the password 
-function displayPassword(passwordText){
-    const passwordEl = document.createElement('p'); // Creates element by tagName
-    passwordEl.classList.add("password-section", "password-genereation-section","text-password" ); // Adds existing classes to element 
-    passwordEl.textContent = passwordText; // Adds the content into the element
+function displayPassword(passwordTextA, passwordTextB ){
+    passwordElA.classList.add("text-password" ); // Adds existing classes to element 
+    passwordElA.textContent = passwordTextA; // Adds the content into the element
+    
     const passwordCharacters = document.querySelector(".password-genereation-section"); // Select element in HTML via class name
-    passwordCharacters.appendChild(passwordEl); // Add element in HTML via DOM
+    passwordCharacters.appendChild(passwordElA); // Add element in HTML via DOM
+
+    passwordElB.classList.add("text-password" ); // Adds existing classes to element 
+    passwordElB.textContent = passwordTextB;
+    passwordCharacters.appendChild(passwordElB);
 }
 
 
 
 
 
-
+// Task to do: Create function to genereate two random passwords when user clicks the button.
+//             Each password should be 15 characters long.
+// 
 
 
 
@@ -78,10 +91,16 @@ function displayPassword(passwordText){
 //     passwordBtnEl.textContent="Hit";
 // })
 
-// Task to do: Create function to genereate two random passwords when user clicks the button.
-//             Each password should be 15 characters long.
-// 
 
 
-// useful URLS 
+
+
+// Useful URLS 
 // https://bobbyhadz.com/blog/javascript-create-element-with-class
+
+// Adding a <p> in a div with an existing class ? 
+// const passwordEl = document.createElement('p');
+// passwordEl.classList.add("password-section", "password-genereation-section","text-password" );
+// passwordEl.textContent = "test3";
+// const passwordText = document.querySelector(".password-genereation-section");
+// passwordText.appendChild(passwordEl);
