@@ -61,8 +61,11 @@ html, body, input {
 
 .password-genereation-section {
     display: flex;
-    justify-content: flex-start;
-    /* border: 1px solid red; */
+    /* max-width: 1600px; */
+    flex-direction: row;
+    /* justify-content: space-evenly;
+    align-items: flex-start; */
+    border: 1px solid red;
 }
 
 .text-password {
