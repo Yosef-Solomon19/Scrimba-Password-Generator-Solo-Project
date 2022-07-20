@@ -63,7 +63,18 @@ function displayPassword(passwordTextA, passwordTextB ){
     passwordElB.classList.add("text-password" ); // Adds existing classes to element 
     passwordElB.textContent = passwordTextB;
     passwordCharacters.appendChild(passwordElB);
+    // copyToClipBoard()
 }
+
+function copyToClipBoard() {
+    const copyText = document.querySelector(".text-password")
+    copyText.select();
+    navigator.clipboard.writeText(copyText)
+    // navigator.clipboard.writeText(copyText.value);
+    alert("Copied the text: " + copyText.value);
+
+}
+
 
 
 
