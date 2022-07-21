@@ -77,4 +77,5 @@ html, body, input {
     color: #55F991;
     padding: 0px 50px 0px 50px;
     border-radius: 5px;
+    cursor: pointer;
 }
