@@ -32,6 +32,8 @@ function randomPasswords() {
     // passwordGenerationLimit();
 
     displayPassword(passwordTextA, passwordTextB);
+    copyToClipBoard(passwordTextA, passwordTextB);
+
     
 }
 
@@ -50,7 +52,15 @@ function randomPasswords() {
 
 // Create element globally instead of creating it inside displayPassword funciton
 const passwordElA = document.createElement('p'); // Creates element by tagName
+// passwordElA.addEventListener('click', function() {
+//     // alert('button clicked');
+    
+    
+// })
 const passwordElB = document.createElement('p');
+// passwordElB.addEventListener('click', function() {
+//     alert('button B clicked');
+// })
 
 // function to add an element with the password 
 function displayPassword(passwordTextA, passwordTextB ){
@@ -63,15 +73,29 @@ function displayPassword(passwordTextA, passwordTextB ){
     passwordElB.classList.add("text-password" ); // Adds existing classes to element 
     passwordElB.textContent = passwordTextB;
     passwordCharacters.appendChild(passwordElB);
-    // copyToClipBoard()
+    // copyToClipBoard();
+    
 }
 
-function copyToClipBoard() {
-    const copyText = document.querySelector(".text-password")
-    copyText.select();
-    navigator.clipboard.writeText(copyText)
-    // navigator.clipboard.writeText(copyText.value);
-    alert("Copied the text: " + copyText.value);
+function copyToClipBoard(passwordTextA, passwordTextB ) {
+    passwordElA.addEventListener('click', function() {
+        alert('button A clicked');
+        navigator.clipboard.writeText(passwordTextA);
+        console.log(passwordTextA);
+    })
+
+    passwordElB.addEventListener('click', function() {
+        alert('button B clicked');
+        navigator.clipboard.writeText(passwordTextB);
+        console.log(passwordTextB);
+    })
+
+
+    // const copyText = document.querySelector(".text-password");
+    // console.log(copyText.value);
+    // // navigator.clipboard.writeText(copyText.value)
+    // // // navigator.clipboard.writeText(copyText.value);
+    // // alert("Copied the text: " + copyText);
 
 }
 
