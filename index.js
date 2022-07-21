@@ -37,33 +37,14 @@ function randomPasswords() {
     
 }
 
-// Function to prevent generating more than two passwords 
-// let passwordBtnCtn = 0
-// function passwordGenerationLimit () {
-//     passwordBtnCtn += 1; 
-//     console.log(passwordBtnCtn);
-//     if (passwordBtnCtn === 2) {
-//         passwordBtnEl.disabled = true;
-//     }
-// }
-
-
-
 
 // Create element globally instead of creating it inside displayPassword funciton
 const passwordElA = document.createElement('p'); // Creates element by tagName
-// passwordElA.addEventListener('click', function() {
-//     // alert('button clicked');
-    
-    
-// })
 const passwordElB = document.createElement('p');
-// passwordElB.addEventListener('click', function() {
-//     alert('button B clicked');
-// })
+
 
 // function to add an element with the password 
-function displayPassword(passwordTextA, passwordTextB ){
+function displayPassword(passwordTextA, passwordTextB){
     passwordElA.classList.add("text-password" ); // Adds existing classes to element 
     passwordElA.textContent = passwordTextA; // Adds the content into the element
     
@@ -73,35 +54,23 @@ function displayPassword(passwordTextA, passwordTextB ){
     passwordElB.classList.add("text-password" ); // Adds existing classes to element 
     passwordElB.textContent = passwordTextB;
     passwordCharacters.appendChild(passwordElB);
-    // copyToClipBoard();
     
 }
 
-function copyToClipBoard(passwordTextA, passwordTextB ) {
+function copyToClipBoard(passwordTextA, passwordTextB) {
     passwordElA.addEventListener('click', function() {
-        alert('button A clicked');
+        // alert('button A clicked');
         navigator.clipboard.writeText(passwordTextA);
         console.log(passwordTextA);
     })
 
     passwordElB.addEventListener('click', function() {
-        alert('button B clicked');
+        // alert('button B clicked');
         navigator.clipboard.writeText(passwordTextB);
         console.log(passwordTextB);
     })
 
-
-    // const copyText = document.querySelector(".text-password");
-    // console.log(copyText.value);
-    // // navigator.clipboard.writeText(copyText.value)
-    // // // navigator.clipboard.writeText(copyText.value);
-    // // alert("Copied the text: " + copyText);
-
 }
-
-
-
-
 
 
 // Task to do: Create function to genereate two random passwords when user clicks the button.
@@ -131,8 +100,6 @@ function copyToClipBoard(passwordTextA, passwordTextB ) {
 // How do I copy content of an element that was dynamicall created from js? 
 // url references: https://stackoverflow.com/questions/6658752/click-event-doesnt-work-on-dynamically-generated-elements
 // https://www.geeksforgeeks.org/how-to-create-copy-to-clipboard-button/
-
-
 
 // Future development 
 // Ability to set password length
@@ -168,3 +135,28 @@ function copyToClipBoard(passwordTextA, passwordTextB ) {
 // passwordEl.textContent = "test3";
 // const passwordText = document.querySelector(".password-genereation-section");
 // passwordText.appendChild(passwordEl);
+
+
+// *** 21/7/2022 *** 
+// What I've Accomplished 
+// Compeleted the the copy to clipboard functionality
+
+// Working on: 
+// Providing a tool tip via CSS
+
+// What I've learned 
+// The issue with the copy to clipboard was resolved by calling the function
+// in the randomPassword function with the two variables containing the password text.
+// It feels like I'm hard coding but I feel good about creating the two elements that
+// contains the two passwords so that everytime the button is clicked,
+// it won't create new elements instead just replace the values in those two elements.
+
+// Problem
+// Creating and designing a tool tip to let the user know that they can 
+// click on the newly generated password text. 
+
+// Future development 
+// I think these are something I might do later on since it'll take me 
+// more time to figure out how to do this.
+// Ability to set password length
+// Toggle "symbols" & "numbers" on/off
