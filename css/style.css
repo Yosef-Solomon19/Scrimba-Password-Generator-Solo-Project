@@ -59,10 +59,10 @@ html, body, input {
     
 }
 
-.password-genereation-section {
+.password-generation-section {
     display: flex;
     /* max-width: 1600px; */
-    flex-direction: row;
+    margin: 0 auto;
     /* justify-content: space-evenly;
     align-items: flex-start; */
     /* border: 1px solid red; */
@@ -79,3 +79,33 @@ html, body, input {
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+/* Tool tip section */
+.tool-tip .tool-tip-text {
+    visibility: hidden;
+    width: 150px;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    background-color: #273549;
+
+    position: absolute;
+    z-index: 1; /* Specifies the stack order of an element. Works on positioned element i.e position: absolute, relation, fixed, etc */
+    
+}
+
+.tool-tip-text {
+    right: 75%;
+    bottom: 45%;
+}
+
+.tool-tip:hover .tool-tip-text {
+    visibility: visible;
+
+}
+
+/* .tool-tip-text:active {
+    content: 'Copied';
+} */
