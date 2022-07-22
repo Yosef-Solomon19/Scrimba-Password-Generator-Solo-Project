@@ -33,7 +33,7 @@ function randomPasswords() {
 
     displayPassword(passwordTextA, passwordTextB);
     copyToClipBoard(passwordTextA, passwordTextB);
-
+    
     
 }
 
@@ -42,14 +42,16 @@ function randomPasswords() {
 const passwordElA = document.createElement('p'); // Creates element by tagName
 const passwordElB = document.createElement('p');
 
+const toolTipTextEl = document.querySelector(".tool-tip-text") // select span element
 
-// function to add an element with the password 
+
+// function to add an element with the password to an existing element in HTML
 function displayPassword(passwordTextA, passwordTextB){
     passwordElA.classList.add("text-password"); // Adds existing classes to element 
     passwordElA.textContent = passwordTextA; // Adds the content into the element
     
     const passwordCharacters = document.querySelector(".password-generation-section"); // Select element in HTML via class name
-    passwordCharacters.appendChild(passwordElA); // Add element in HTML via DOM
+    passwordCharacters.appendChild(passwordElA); // Add element to an existing element in HTML via DOM
 
     passwordElB.classList.add("text-password" ); // Adds existing classes to element 
     passwordElB.textContent = passwordTextB;
@@ -57,18 +59,28 @@ function displayPassword(passwordTextA, passwordTextB){
     
 }
 
-function copyToClipBoard(passwordTextA, passwordTextB) {
+// Function takes the password text that's randomly generated
+// listens for when the element is clicked 
+// the navigator.clipboard... copies the content inside the element to the clipboard
+// Which is reflected by the tooltip saying "Copied!"
+// After a second the tooltip reverts back to its original message.
+function copyToClipBoard() {
     passwordElA.addEventListener('click', function() {
         // alert('button A clicked');
-        navigator.clipboard.writeText(passwordTextA);
-        document.querySelector(".tool-tip-text").textContent = "Copied!";
-        console.log(passwordTextA);
+        navigator.clipboard.writeText(passwordElA.textContent);
+        toolTipTextEl.textContent = "Copied!";
+        setTimeout(function() {
+            toolTipTextEl.textContent = "Click to copy";
+        },1000)
     })
 
     passwordElB.addEventListener('click', function() {
         // alert('button B clicked');
-        navigator.clipboard.writeText(passwordTextB);
-        console.log(passwordTextB);
+        navigator.clipboard.writeText(passwordElB.textContent);
+        toolTipTextEl.textContent = "Copied!";
+        setTimeout(function() {
+            toolTipTextEl.textContent = "Click to copy";
+        },1000)
     })
 
 }
@@ -126,10 +138,6 @@ function copyToClipBoard(passwordTextA, passwordTextB) {
 
 
 
-
-// Useful URLS 
-// https://bobbyhadz.com/blog/javascript-create-element-with-class
-
 // Adding a <p> in a div with an existing class ? 
 // const passwordEl = document.createElement('p');
 // passwordEl.classList.add("password-section", "password-genereation-section","text-password" );
@@ -161,3 +169,34 @@ function copyToClipBoard(passwordTextA, passwordTextB) {
 // more time to figure out how to do this.
 // Ability to set password length
 // Toggle "symbols" & "numbers" on/off
+
+
+
+// *** 22/7/2022 *** 
+// What I've Accomplished 
+// Compeleted the tooltip functionality( via CSS & JS), improved clipboard functionality. 
+
+// Working on: 
+// Off of the next lesson on Scrimba
+
+// What I've learned 
+// I can use the .innerHTML or .textContent to get the content of an element without need .value maybe ?
+// How to use setTimeout to do something after a number of seconds. And creating a function inside it w/out need some other function
+// How to create a tooltip but I'd have to read up of the steps if I'm to go off on memory alone.
+// 
+// 
+
+// Problem
+// Creating and designing a tool tip to let the user know that they can 
+// click on the newly generated password text. 
+
+// Future development 
+// I think these are something I might do later on since it'll take me 
+// more time to figure out how to do this.
+// Ability to set password length
+// Toggle "symbols" & "numbers" on/off
+
+// Useful URLS 
+// https://bobbyhadz.com/blog/javascript-create-element-with-class
+// https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
+// https://developer.mozilla.org/en-US/docs/Web/API/clearTimeout#examples
