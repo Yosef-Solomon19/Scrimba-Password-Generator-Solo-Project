@@ -103,9 +103,7 @@ html, body, input {
 
 .tool-tip:hover .tool-tip-text {
     visibility: visible;
+    
 
 }
 
-/* .tool-tip-text:active {
-    content: 'Copied';
-} */
