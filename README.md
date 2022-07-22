@@ -1,4 +1,4 @@
-# Password Generator (To be edited)
+# Password Generator (Currently updating)
 
 - [Overview](#overview)
 
