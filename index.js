@@ -199,4 +199,4 @@ function copyToClipBoard() {
 // Useful URLS 
 // https://bobbyhadz.com/blog/javascript-create-element-with-class
 // https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
-// https://developer.mozilla.org/en-US/docs/Web/API/clearTimeout#examples
+// https://developer.mozilla.org/en-US/docs/Web/API/setTimeout#examples
