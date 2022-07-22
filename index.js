@@ -45,10 +45,10 @@ const passwordElB = document.createElement('p');
 
 // function to add an element with the password 
 function displayPassword(passwordTextA, passwordTextB){
-    passwordElA.classList.add("text-password" ); // Adds existing classes to element 
+    passwordElA.classList.add("text-password"); // Adds existing classes to element 
     passwordElA.textContent = passwordTextA; // Adds the content into the element
     
-    const passwordCharacters = document.querySelector(".password-genereation-section"); // Select element in HTML via class name
+    const passwordCharacters = document.querySelector(".password-generation-section"); // Select element in HTML via class name
     passwordCharacters.appendChild(passwordElA); // Add element in HTML via DOM
 
     passwordElB.classList.add("text-password" ); // Adds existing classes to element 
@@ -61,6 +61,7 @@ function copyToClipBoard(passwordTextA, passwordTextB) {
     passwordElA.addEventListener('click', function() {
         // alert('button A clicked');
         navigator.clipboard.writeText(passwordTextA);
+        document.querySelector(".tool-tip-text").textContent = "Copied!";
         console.log(passwordTextA);
     })
 
