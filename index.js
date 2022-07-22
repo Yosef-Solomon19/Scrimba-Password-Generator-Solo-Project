@@ -120,7 +120,7 @@ function copyToClipBoard() {
 
 
 
-// Three ways one with a onclick attribute in the element then the funtion 
+// ** Three ways to listen for an event first way having a onclick attr. in the element ** 
 // function passwordHit() {
 //     passwordBtnEl.textContent="Hit";
 // } 
@@ -137,7 +137,7 @@ function copyToClipBoard() {
 
 
 
-
+//  ** Creating an element via JS ** 
 // Adding a <p> in a div with an existing class ? 
 // const passwordEl = document.createElement('p');
 // passwordEl.classList.add("password-section", "password-genereation-section","text-password" );
