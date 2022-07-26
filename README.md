@@ -37,11 +37,8 @@ At the time of working on this project in Mod 3, the module hasn't taught me the
 
 ## My process
 
-I initially started with looking for basketball scoreboards that had additional counters. And I found an image that I wanted to work off of for the rest of the project [https://thumbs.dreamstime.com/z/basketball-scoreboard-15216779.jpg]. Based on the basketball scoreboard image I wanted to to divide the scoreboard into three sections/columns. This would make it easier to work on one section at a time. This also helped with how to structure each column via flexbox. I tried to make utility classes since the home column and the guest column would be identical interms of positioning and styling. For the middle of the scoreboard I believe had similar positioning aswell. I used flexbox for the most part to establish the columns for each sections.
-
-For javascript, I had to learn to create timers by following a video by Wes Bos to help with that. I liked how the video used modern Js syntax compared to what I've found when it comes to building timers.
-
-For the bonus and possession indicators, I had the indicators be clickable. I could've written a function with a conditional statement based on the number of fouls. However, I was biting more than I can chew with the current stretch goals that I had. And it was taking up for time than I would've liked.
+Before I started coding, I took out my notebook and drew a layout for the body as my canvas essentially a large rectangle/sqaure.
+Inside I drew another square which was to act as my container. Inside the container I had vertical divs. The top div contained the main text and the bottom div contained the button, the border line and the space under it for the password text that was dynamically generated in javascript as a paragraph element with some class assinged to it.
 
 ### Built with
 
@@ -52,28 +49,19 @@ For the bonus and possession indicators, I had the indicators be clickable. I co
 
 ### What I learned
 
-I think I'm getting more comfortable with flexbox and understanding its relationship with width, and how it affects other elements.
-I haven an idea on how to build timers but I'd would have to revisit the Wes Bos video just to make sure.
-
-I Figured out how to pause and resume timer
-For the pause, I needed to use the method to cancel the repeated action set by setInterval.
-I think this also means that I can't use the original value from the countdown variable.
-To resume, I initally had a another variable that stores the original value inside the countdown interval variable/method.
-From there the resumeTimer funciton calls the timer function but with an update value from where
-the original value stopped when clear Interval was called after hiiting the pause button.
-
-If I wanted to switch between two colors I can use what's called a class list.toggle
-
-Terneray Operator but I should learn more about that.
-
-Styling from javascript will make the change permanent. If the bonus circle indicator is clicked and I tried to revert it back to its default color
-I for some reason wouldn't be able to get the lit color after clicking it.
-
-And I've learned that I don't have to remember everything. I think I head this from a recent podcast, like a librarian if I know where and how to find something in-order to do something that's fine. It's important to know the fundamentals but I don't have to be a walking encyclopedia to get the job done so to speak.
+Depending on the circumstance click events may not work with elements that have been dynamically generated.
+I learned how to create elements in javascript and how to add them
+to existing elements in HTML.
+Using the clipboard API to copy text to.
+Using .innerHTML or .textContent to copy the content of the element without needing .value from what I've noticed.
+Using setTimeout.
+Creating a tooltip to let the user know that they can click the password text to copy. However, I'd have to re-read the steps if I'm to go off on memory alone.
 
 ### Continued development
 
-There are a couple of things I can do from the remaining stretch goals i.e custom password length and toggling
+Ability to set password length
+Toggle "symbols" & "numbers" on/off
+However, these are some things I might do later on since it might take me some time to figure out before implementing these features. As it stands I'm currently fine with how this project turned out.
 
 ### Useful Resources
 

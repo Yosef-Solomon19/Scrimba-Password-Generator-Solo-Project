@@ -180,7 +180,7 @@ function copyToClipBoard() {
 // Off of the next lesson on Scrimba
 
 // What I've learned 
-// I can use the .innerHTML or .textContent to get the content of an element without need .value maybe ?
+// I can use the .innerHTML or .textContent to get the content of an element without needing .value maybe ?
 // How to use setTimeout to do something after a number of seconds. And creating a function inside it w/out need some other function
 // How to create a tooltip but I'd have to read up of the steps if I'm to go off on memory alone.
 // 
