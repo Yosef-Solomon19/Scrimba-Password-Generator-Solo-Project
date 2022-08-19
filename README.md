@@ -29,7 +29,7 @@ At the time of working on this project in Mod 3, the module hasn't taught me the
 
 - Ability to set password length []
 - Copy on click feature [x] - Also added a tooltip to indicate when its been clicked
-- Toggle "symbols" & "numbers" [x]
+- Toggle "symbols" & "numbers" []
 
 ### Links
 
